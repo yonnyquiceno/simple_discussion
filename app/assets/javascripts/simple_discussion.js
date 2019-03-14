@@ -20,29 +20,13 @@ $(document).on('click', "[data-behavior~=see-more]", function () {
   }
 });
 
-$(document).on('keypress', "#forum_post_body", function (e) {
-  if (e.keyCode == 13) {
-    if (e.shiftKey) {
-      this.value = content.substring(0, caret - 1) + "\n" + content.substring(caret, content.length);
-      event.stopPropagation();
-    } else {
-      console.log(this);
-      this.closest('form').submit();
-    }
-    return false;
-  }
-});
-
 $(document).ready(function () {
   var cards = document.getElementsByClassName('forum-post');
   var l = cards['length']
-  console.log(l);
 
   for (i = 0; i < l; i++) {
 
     if (cards[i].offsetHeight < 115) {
-      console.log(cards[i].offsetHeight);
-
       $(cards[i]).find('.diffuse').hide()
     }
   }

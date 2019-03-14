@@ -260,6 +260,7 @@ $break-medium: 770px;
         padding-left: 5px;
         padding-right: 5px;
         margin-top: 30px;
+        margin-bottom: 35px;
       }
       img {
         @media screen and (max-width: $break-medium) {
@@ -306,6 +307,9 @@ $break-medium: 770px;
         background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 90%);
         background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 90%);
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -4%, white 43%);
+        @media screen and (max-width: $break-medium) {
+          display: none;
+        }
       }
       .options {
         background-color: white;
@@ -318,12 +322,15 @@ $break-medium: 770px;
     }
   }
 
-  .subcomment-area {
-    display: none;
-    .comment-submit {
-      display: none;
-    }
-  }
+.subcomment-area {
+  display: none;
+}
+.comment-submit {
+  top: -65px;
+  right: 10px;
+  position: relative;
+  font-weight: bold;
+}
 
 .nested_forum_posts {
   border-left: 2px solid gainsboro;
